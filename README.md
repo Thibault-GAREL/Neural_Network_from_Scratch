@@ -4,7 +4,7 @@ This project implements a simple neural network from scratch in C. It learns to 
 # 🚀 Features
   🧩 Fully custom neural network implementation in C (no external ML libraries)
 
-  ![NN image](Images/.png)
+  ![NN image](Images/NN_display_in_action.png)
   📈 Live training visualization, including:
 
     - 🔵 Left side: graph showing target values vs. predicted values
