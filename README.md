@@ -1,6 +1,6 @@
 # 🧠 Neural Network From Scratch with Real-Time Visualization (C + Allegro)
 
-![C](https://img.shields.io/badge/C-99%2C%2011%20(partial)-blue.svg)
+![C](https://img.shields.io/badge/C-99-blue.svg)
 ![Allegro](https://img.shields.io/badge/Allegro-5.x-red.svg)  
 
 ![License](https://img.shields.io/badge/license-MIT-green.svg)  
@@ -51,10 +51,10 @@ What makes this project unique is its **real-time graphical visualization** usin
 Clone the repository and install dependencies:  
 ```bash
 git clone https://github.com/Thibault-GAREL/Neural_Network_from_Scratch.git
-cd Language_Models
-pip install torch
-# install with Cuda:
-# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+sudo apt-get update
+sudo apt-get install liballegro5-dev
+# It is for Linux 🐧 !
+# For macOS 🍎 / Windows 🪟 , consult the official Allegro documentation.
 ```
 
 ---
