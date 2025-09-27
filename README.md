@@ -1,4 +1,4 @@
-# 🧠 Neural Network From Scratch with Real-Time Visualization (C + Allegro)
+# 🧠 Neural Network From Scratch
 
 ![C](https://img.shields.io/badge/C-99-blue.svg)
 ![Allegro](https://img.shields.io/badge/Allegro-5.x-red.svg)  
@@ -7,7 +7,7 @@
 ![Contributions](https://img.shields.io/badge/contributions-welcome-orange.svg)  
 
 ## 📝 Project Description  
-Welcome to my first big project : **Neural Network From Scratch** 🧠 !  
+Welcome to my first big project : **Neural Network From Scratch** 🧠 **with Real-Time Visualization (C + Allegro)** !  
 This project implements a simple neural network from scratch in C. It learns to approximate basic target functions through supervised learning, using gradient descent and backpropagation.  
 
 What makes this project unique is its **real-time graphical visualization** using the Allegro graphics library : We are able to see the difference between targets and outputs, graph for the loss and visualisation of the network🕸️.
@@ -46,23 +46,54 @@ What makes this project unique is its **real-time graphical visualization** usin
 
 ## 📂 Repository structure  
 ```bash
-├── img/           # For the README.md
-├── text/          # Training corpora (Victor Hugo, Harry Potter, …)
-├── Bigram.py      # Bigram model + first experiments  
+├── Images/                      # For the README.md
+├── neuron_network_clear/
+| ├── cmake-build-debug/
+| ├── 1_fwd_propagation.c        # Forward propagation calcul
+| ├── 1_fwd_propagation.h
+| ├── 2_back_propagation.c       # Back propagation calcul
+| ├── 2_back_propagation.h
+| ├── Arial.ttf                  # Font file
+| ├── CMakeLists.txt
+| ├── affichage_tableau.c        # Allegro display
+| ├── affichage_tableau.h
+| ├── calcul.c                   # Different calcul (sigmoid / relu / MSE / etc. )
+| ├── calcul.h
+| ├── creator.c                  # Manage the mamory for each structure
+| ├── creator.h
+| ├── donnees.txt                # Here is the data the NN will learn ! You can add what ever you want.
+| ├── main.c                     # Run this to start the program
+| ├── structure.h
+| ├── training.c                 # Do the iteration of training
+| ├── training.h
 ├── LICENSE
 ├── README.md
-├── Transformer.py # Full Transformer implementation  
 ```
 
 ---
-## 💻 Run it on Your PC  
-Clone the repository and install dependencies:  
+
+## 💻 Run it on Your PC
+Clone the repository and install dependencies:
+
 ```bash
+# Clone the repository
 git clone https://github.com/Thibault-GAREL/Neural_Network_from_Scratch.git
+cd Neural_Network_from_Scratch
+
+# Install dependencies (Linux 🐧)
 sudo apt-get update
-sudo apt-get install liballegro5-dev
-# It is for Linux 🐧 !
-# For macOS 🍎 / Windows 🪟 , consult the official Allegro documentation.
+sudo apt-get install -y git cmake liballegro5-dev
+
+# For macOS 🍎 / Windows 🪟, consult the official Allegro documentation:
+# https://liballeg.org/
+
+# Build the project
+mkdir build && cd build
+cmake .. || { echo "CMake failed. Check dependencies."; exit 1; }
+make || { echo "Build failed. Check errors above."; exit 1; }
+
+# Run the project (replace with the actual binary name)
+./YourBinaryName
 ```
 
 ---
