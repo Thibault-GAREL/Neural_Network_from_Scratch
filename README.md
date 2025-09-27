@@ -32,7 +32,15 @@ What makes this project unique is its **real-time graphical visualization** usin
 ---
 
 ## ⚙️ How it works
-- 
+- 🧠 Input layer: takes in data (here what is in donnees.txt)
+- 🔗 Weights & biases: adjust how much each input matters
+- ➕ Summation: combines inputs with weights
+- 🎚️ Activation function: decides if the neuron “fires” (here we use the sigmoid fonction)
+- 🏗️ Hidden layers: repeat process to learn complex patterns
+- 🎯 Output layer: produces final result / prediction
+- 🔄 Training: network compares result to truth, adjusts weights (backpropagation)
+- 📈 Iteration: repeats until error is minimized
+
 
 ---
 
