@@ -105,4 +105,5 @@ It just explain who work a neuron, that's all 🤯 !
 ---
 
 # ✍️ P.S. 
-  I coded this in 2023-2024 so it is not so well optimized ! I was a beginner. 😆
+I coded this in 2023-2024 so it is not so well optimized ! I was a beginner. 😆  
+Code created by me 😎, Thibault GAREL - [Github](https://github.com/Thibault-GAREL)
