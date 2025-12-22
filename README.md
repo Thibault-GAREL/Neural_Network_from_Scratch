@@ -6,6 +6,10 @@
 ![License](https://img.shields.io/badge/license-MIT-green.svg)  
 ![Contributions](https://img.shields.io/badge/contributions-welcome-orange.svg)  
 
+<p align="center">
+  <img src="Images/Gif-neural-network.gif" alt="Logo Gif">
+</p>
+
 ## 📝 Project Description  
 Welcome to my first big project : **Neural Network From Scratch** 🧠 **with Real-Time Visualization (C + Allegro)** !  
 This project implements a simple neural network from scratch in C. It learns to approximate basic target functions through supervised learning, using gradient descent and backpropagation.  
