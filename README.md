@@ -112,23 +112,23 @@ toward the end of development, as a cross-check tool.
 
 ### Global view — one iteration block per row group
 
-![Excel global view](Images/Classeur_excel_-_Vu_globale.png)
+![Excel global view](Images/Classeur excel - Vu globale.png)
 
 Each "block" of rows represents one training iteration. You can visually follow
 how the weights drift across the entire training run just by scrolling down.
 
 ### Local view — anatomy of one iteration
 
-![Excel local view](Images/Classeur_excel_-_Vu_local.png)
-
+![Excel local view](Images/Classeur excel - Vu local.png)
+For the first layer :
 | Zone | Location | Role |
 |---|---|---|
-| **Inputs** (`Valeur entrée`) | Column B/C (left of each layer block) | Raw input fed into each neuron |
-| **Weights** (`Weight`) | Next column after each input | Learnable parameters — updated each iteration |
-| **Pre-activation** (`Output =/= sig`) | Third column of each layer | Weighted sum before sigmoid |
-| **Activation** (`Output sig`) | Fourth column of each layer | Sigmoid output — becomes next layer's input |
-| **Hyperparameters** (`Delta learning`) | Small isolated cell, top-right area | Learning rate α used in weight update |
-| **Loss** (`Erreur moy`) | Isolated cell, center-right | Mean error over the current iteration |
+| **Inputs** (`Valeur entrée`) | Column B / F / J / T / ... | Raw input fed into each neuron |
+| **Weights** (`Weight`) | Column C / G / K / U / ... | Learnable parameters — updated each iteration |
+| **Pre-activation** (`Output =/= sig`) | Column D / H / L / V / ... | Weighted sum before sigmoid |
+| **Activation** (`Output sig`) | Column E / I / M / W / ... | Sigmoid output — becomes next layer's input |
+| **Hyperparameters** (`Delta learning`) | Cell O7 | Learning rate α used in weight update |
+| **Loss** (`Erreur moy`) | Cell O3 / O34 / ... | Mean error over the current iteration |
 | **Target / Output / Error** | Small table in the middle | Ground truth vs prediction, per sample |
 | **Backprop deltas** (`Calcul de delta`) | Bottom of each iteration block | Gradients propagated back through layers |
 
