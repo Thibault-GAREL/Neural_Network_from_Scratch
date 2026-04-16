@@ -102,6 +102,43 @@ make || { echo "Build failed. Check errors above."; exit 1; }
 
 ---
 
+## 🧮 Bonus — Excel Prototype
+
+Before writing a single line of C, I built a manual simulation in Excel to verify
+the math step by step. It was made around the same time as the C project,
+toward the end of development, as a cross-check tool.
+
+> Files: `Classeur_reseau_de_neurone_v1.xlsx`
+
+### Global view — one iteration block per row group
+
+![Excel global view](Images/Classeur_excel_-_Vu_globale.png)
+
+Each "block" of rows represents one training iteration. You can visually follow
+how the weights drift across the entire training run just by scrolling down.
+
+### Local view — anatomy of one iteration
+
+![Excel local view](Images/Classeur_excel_-_Vu_local.png)
+
+| Zone | Location | Role |
+|---|---|---|
+| **Inputs** (`Valeur entrée`) | Column B/C (left of each layer block) | Raw input fed into each neuron |
+| **Weights** (`Weight`) | Next column after each input | Learnable parameters — updated each iteration |
+| **Pre-activation** (`Output =/= sig`) | Third column of each layer | Weighted sum before sigmoid |
+| **Activation** (`Output sig`) | Fourth column of each layer | Sigmoid output — becomes next layer's input |
+| **Hyperparameters** (`Delta learning`) | Small isolated cell, top-right area | Learning rate α used in weight update |
+| **Loss** (`Erreur moy`) | Isolated cell, center-right | Mean error over the current iteration |
+| **Target / Output / Error** | Small table in the middle | Ground truth vs prediction, per sample |
+| **Backprop deltas** (`Calcul de delta`) | Bottom of each iteration block | Gradients propagated back through layers |
+
+The 3 layer groups (`Couche 1`, `Couche 2`, `Couche 3`) are repeated left-to-right
+for the two training samples, then mirrored on the right side for the weight-update pass.
+
+> ⚠️ Not optimized — purely a pedagogical debugging artifact to validate the C math.
+
+---
+
 ## 📖 Inspiration / Sources  
 This project is based on a basic book named "L'intelligence artificielle pour les dévellopeurs" from Virginie MATHIVET.  
 It just explain who work a neuron, that's all 🤯 !
