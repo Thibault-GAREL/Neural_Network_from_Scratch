@@ -112,14 +112,14 @@ toward the end of development, as a cross-check tool.
 
 ### Global view — one iteration block per row group
 
-![Excel global view]("Images/Classeur excel - Vu globale.png")
+![Excel global view](Images/Classeur_excel-Vu_globale.png)
 
 Each "block" of rows represents one training iteration. You can visually follow
 how the weights drift across the entire training run just by scrolling down.
 
 ### Local view — anatomy of one iteration
 
-![Excel local view]("Images/Classeur excel - Vu local.png")
+![Excel local view](Images/Classeur_excel-Vu_local.png)
 For the first layer :
 | Zone | Location | Role |
 |---|---|---|
